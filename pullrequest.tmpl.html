@@ -1,0 +1,23 @@
+
+
+<table class="table table-responsive table-hover" >
+    <thead>
+    <tr>
+
+        <th ng-click="pullRequestListVm.sortBy='url'; pullRequestListVm.sortOrder=!pullRequestListVm.sortOrder;">URL</th>
+        <th ng-click="pullRequestListVm.sortBy='number'; pullRequestListVm.sortOrder=!pullRequestListVm.sortOrder;">Number</th>
+        <th ng-click="pullRequestListVm.sortBy='date'; pullRequestListVm.sortOrder=!pullRequestListVm.sortOrder;">Created At</th>
+        <th ng-click="pullRequestListVm.sortBy='time'; pullRequestListVm.sortOrder=!pullRequestListVm.sortOrder;">Update On</th>
+        <th ng-click="pullRequestListVm.sortBy='state'; pullRequestListVm.sortOrder=!pullRequestListVm.sortOrder;">State</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="res in pullRequestListVm.pullRequest | filter:pullRequestListVm.searchTxt | orderBy:pullRequestListVm.sortBy:pullRequestListVm.sortOrder">
+        <th>{{res.url}}</th>
+        <th>{{res.number}}</th>
+        <th>{{res.created_at | date}}</th>
+        <th>{{res.updated_at | date}}</th>
+        <th>{{res.state}}</th>
+    </tr>
+    </tbody>
+</table>

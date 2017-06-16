@@ -1,0 +1,29 @@
+<form ng-submit="addRepositoriesListVm.addRepo()" id="reserve-form" class="form-reserve-bg">
+    <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+            <div class="form-group has-success" >
+                <label class="control-label" for="addRepoName">Name(required)</label>
+                <input type="text" class="form-control" id="addRepoName" aria-describedby="helpBlock2" ng-model="addRepositoriesListVm.repo.name" required>
+
+            </div>
+            <div class="form-group has-success">
+                <label class="control-label" for="addRepoDescription">Description</label>
+                <input type="text" class="form-control" id="addRepoDescription" aria-describedby="helpBlock2" ng-model="addRepositoriesListVm.repo.description" >
+
+            </div>
+            <div class="form-group has-success">
+                <label class="control-label" for="addRepoHomepage">Homepage</label>
+                <input type="text" class="form-control" id="addRepoHomepage" aria-describedby="helpBlock2" ng-model="addRepositoriesListVm.repo.homepage">
+
+            </div>
+            <div class="form-group has-success">
+                <label class="control-label" for="addRepoLicense">License Template</label>
+                <input type="text" class="form-control" id="addRepoLicense" aria-describedby="helpBlock2" ng-model="addRepositoriesListVm.repo.license_template">
+
+            </div>
+            <p>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </p>
+        </div>
+    </div>
+</form>

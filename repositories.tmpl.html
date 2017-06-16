@@ -1,0 +1,26 @@
+<table class="table table-responsive table-hover" >
+    <thead>
+    <tr>
+        <th>Action</th>
+        <th ng-click="repositoriesListVm.sortBy='id'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">ID</th>
+        <th ng-click="repositoriesListVm.sortBy='name'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Name</th>
+        <th ng-click="repositoriesListVm.sortBy='email'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Owner Name</th>
+        <th ng-click="repositoriesListVm.sortBy='telephone'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Owner ID</th>
+        <th ng-click="repositoriesListVm.sortBy='date'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Created At</th>
+        <th ng-click="repositoriesListVm.sortBy='time'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Update On</th>
+        <th ng-click="repositoriesListVm.sortBy='message'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Last Push on</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="res in repositoriesListVm.data | filter:repositoriesListVm.searchTxt | orderBy:repositoriesListVm.sortBy:repositoriesListVm.sortOrder">
+        <th><a ng-href="#/reserve/{{res.id}}"><span class="glyphicon glyphicon-user" ></span></a></th>
+        <th>{{res.id}}</th>
+        <th>{{res.name}}</th>
+        <th>{{res.owner.login}}</th>
+        <th>{{res.owner.id}}</th>
+        <th>{{res.created_at | date}}</th>
+        <th>{{res.updated_at | date}}</th>
+        <th>{{res.pushed_at | date}}</th>
+    </tr>
+    </tbody>
+</table>

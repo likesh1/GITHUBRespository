@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-offset-4 col-xs-4">
+        <table class="table table-responsive table-hover" >
+            <thead>
+            <tr>
+                <th ng-click="repositoriesListVm.sortBy='name'; repositoriesListVm.sortOrder=!repositoriesListVm.sortOrder;">Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="res in repositoriesListVm.data | filter:repositoriesListVm.searchTxt | orderBy:repositoriesListVm.sortBy:repositoriesListVm.sortOrder">
+                <th> <a href="#/postPullRequest/{{res.name}}/{{res.owner.login}}" ng-click="postPullRequestListVm.sendValue(res.name)">{{res.name}}</a></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+<form ng-submit="postPullRequestListVm.addPullRequest()" id="reserve-form" class="form-reserve-bg">
+<div class="row">
+    <div class="col-xs-offset-4 col-xs-4">
+        <div class="form-group has-success" >
+            <label class="control-label" for="pullRequestTitle">Title(required)</label>
+            <input type="text" class="form-control" id="pullRequestTitle" aria-describedby="helpBlock2" ng-model="postPullRequestListVm.pullRequest.title" required>
+
+        </div>
+        <div class="form-group has-success">
+            <label class="control-label" for="pullRequestHead">Head (required)</label>
+            <input type="text" class="form-control" id="pullRequestHead" aria-describedby="helpBlock2" ng-model="postPullRequestListVm.pullRequest.head" required>
+
+        </div>
+        <div class="form-group has-success">
+            <label class="control-label" for="pullRequestBase">Base (required)</label>
+            <input type="text" class="form-control" id="pullRequestBase" aria-describedby="helpBlock2" ng-model="postPullRequestListVm.pullRequest.base" required>
+
+        </div>
+        <div class="form-group has-success">
+            <label class="control-label" for="pullRequestBody">Body</label>
+            <input type="text" class="form-control" id="pullRequestBody" aria-describedby="helpBlock2" ng-model="postPullRequestListVm.pullRequest.body">
+
+        </div>
+        <p>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </p>
+    </div>
+</div>
+</form>
+
